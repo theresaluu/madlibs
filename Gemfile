@@ -32,7 +32,16 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+#gems I added below
 gem 'zurb-foundation', '~> 4.0.0'
+
+gem 'active_model_serializers', '~> 0.8.0'
+
+gem 'omniauth'
+
+gem 'omniauth-facebook', '1.4.0'
+
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -45,3 +54,4 @@ gem 'zurb-foundation', '~> 4.0.0'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+ruby "2.0.0"
