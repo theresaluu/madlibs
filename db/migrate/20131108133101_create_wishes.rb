@@ -14,7 +14,8 @@ class CreateWishes < ActiveRecord::Migration
       t.string :omen
       t.string :adj2
       t.string :plnoun
-
+      t.references :friend, index: true
+      
       t.timestamps
     end
   end

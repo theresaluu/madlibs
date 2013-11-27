@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
 	def create
 		friend = Friend.from_omniauth(env["omniauth.auth"])
-		session[:friend_id] = user.user_id
+		session[:friend_id] = friend.friend_id
 		redirect_to root_url
 	end
 

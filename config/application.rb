@@ -24,5 +24,8 @@ module BDayBgosh
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    #recommended by http://stackoverflow.com/questions/17016168/heroku-rails-4-ruby-2-0-0-deploy-fail-production-database-is-not-connectable
+    config.assets.initialize_on_precompile = false
   end
 end

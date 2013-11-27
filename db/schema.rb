@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131120064902) do
+ActiveRecord::Schema.define(version: 20131127193817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,21 +26,24 @@ ActiveRecord::Schema.define(version: 20131120064902) do
   end
 
   create_table "wishes", force: true do |t|
-    t.string   "jname"
-    t.string   "adj"
+    t.string   "nickname"
+    t.string   "ps"
     t.string   "noun"
-    t.string   "noun2"
+    t.string   "salutation"
     t.string   "favmem"
     t.string   "thought"
-    t.string   "quote"
+    t.string   "relationship"
     t.string   "first"
     t.string   "second"
     t.string   "third"
     t.string   "omen"
     t.string   "adj2"
     t.string   "plnoun"
+    t.integer  "friend_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "wishes", ["friend_id"], name: "index_wishes_on_friend_id", using: :btree
 
 end
