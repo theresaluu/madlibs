@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131127193817) do
+ActiveRecord::Schema.define(version: 20131128172444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20131127193817) do
   create_table "wishes", force: true do |t|
     t.string   "nickname"
     t.string   "ps"
-    t.string   "noun"
     t.string   "salutation"
     t.string   "favmem"
     t.string   "thought"
@@ -37,8 +36,6 @@ ActiveRecord::Schema.define(version: 20131127193817) do
     t.string   "second"
     t.string   "third"
     t.string   "omen"
-    t.string   "adj2"
-    t.string   "plnoun"
     t.integer  "friend_id"
     t.datetime "created_at"
     t.datetime "updated_at"

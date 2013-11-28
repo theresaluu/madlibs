@@ -33,7 +33,7 @@ group :doc do
 end
 
 #gems I added below
-gem 'zurb-foundation', '~> 4.0.0'
+gem 'foundation-rails'
 
 gem 'active_model_serializers', '~> 0.8.0'
 
