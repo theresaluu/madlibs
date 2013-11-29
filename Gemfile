@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -32,7 +31,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-#gems I added below
+group :production do
+	# Use postgresql as the database for Active Record
+  gem 'pg'
+  gem 'thin'
+  gem 'rails_12factor'
+end
+
 gem 'foundation-rails'
 
 gem 'active_model_serializers', '~> 0.8.0'
@@ -41,7 +46,7 @@ gem 'omniauth'
 
 gem 'omniauth-facebook', '1.4.0'
 
-gem 'rails_12factor', group: :production
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
