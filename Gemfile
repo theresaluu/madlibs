@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -37,6 +35,7 @@ group :production do
   gem 'thin'
   gem 'rails_12factor'
 end
+ruby "2.0.0"
 
 gem 'foundation-rails'
 
@@ -45,8 +44,6 @@ gem 'active_model_serializers', '~> 0.8.0'
 gem 'omniauth'
 
 gem 'omniauth-facebook', '1.4.0'
-
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -59,4 +56,4 @@ gem 'omniauth-facebook', '1.4.0'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-ruby "2.0.0"
+
