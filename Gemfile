@@ -37,7 +37,7 @@ group :production do
 end
 ruby "2.0.0"
 
-gem 'foundation-rails'
+gem 'zurb-foundation'
 
 gem 'active_model_serializers', '~> 0.8.0'
 
