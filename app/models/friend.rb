@@ -4,8 +4,8 @@ class Friend < ActiveRecord::Base
       friend.provider = auth.provider
       friend.uid = auth.uid
       friend.name = auth.info.name
-      friend.oath_token = auth.credentials.token
-      friend.oath_expires_at = Time.at(auth.credentials.expires_at)
+      friend.oauth_token = auth.credentials.token
+      friend.oauth_expires_at = Time.at(auth.credentials.expires_at)
       friend.save!
     end
   end
