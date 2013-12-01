@@ -6,6 +6,6 @@ class RenameColumn < ActiveRecord::Migration
   	rename_column :wishes, :jname, :nickname
   	rename_column :friends, :provideruid, :provider
 
-  	add_column :friends, :uid
+  	add_column :friends, :uid, :string
   end
 end

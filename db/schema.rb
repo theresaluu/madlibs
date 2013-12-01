@@ -17,12 +17,13 @@ ActiveRecord::Schema.define(version: 20131128172444) do
   enable_extension "plpgsql"
 
   create_table "friends", force: true do |t|
-    t.string   "provideruid"
+    t.string   "provider"
     t.string   "name"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "uid"
   end
 
   create_table "wishes", force: true do |t|
