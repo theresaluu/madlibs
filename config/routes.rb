@@ -5,11 +5,8 @@ BDayBgosh::Application.routes.draw do
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
-  namespace :api, defaults: {format: :json} do
-    resources :wish_lists, only: [:index] do
-      resources :wishes, only: [:index, :create, :update, :destroy]
-    end
+  resources :friends do
+  	resources :wishes
   end
-  
   
 end
