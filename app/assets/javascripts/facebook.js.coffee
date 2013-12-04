@@ -1,6 +1,5 @@
 jQuery ->
-
-event.preventDefault();
+event.preventDefault()
   $('body').prepend('<div id="fb-root"></div>')
 
   $.ajax
