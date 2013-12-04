@@ -24,33 +24,36 @@
 
   <body>
     <header id = "banner">
-      <nav class = "top-bar">
-        <div id="user-widget">
-          <ul class "title-area">
-            <% if current_friend %>
-            <li class = "name">
-              <span>Welcome <strong><%= current_friend.name %></strong>!</span>
-            </li>
-          </ul>
-          <section class ="top-bar-section">
-            <ul class= "left">
-              <li class= "divider"></li>
-              <li class= "active"><a href="#"> 
-                <span>
-                <!-- verify the syntax of this link display/path -->
-                <%#= link_to "Make Bday Wish", wishes_path, action: "create" %>
-                </span></a>
-              </li>
-              <li class= "divider"></li>
-              <li>
-                <%= link_to "Sign out", signout_path, id: "sign_out" %>
+      <div class="contain-to-grid sticky">
+        <nav class = "top-bar">
+          <div id="user-widget">
+            <ul class "title-area">
+              <% if current_friend %>
+              <li class = "name">
+                <span>Welcome <strong><%= current_friend.name %></strong>!</span>
               </li>
             </ul>
-          <% else %>
-            <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-          <% end %>
-        </div>
-      </nav>
+            <section class ="top-bar-section">
+              <ul class= "left">
+                <li class= "divider"></li>
+                <li class= "active"><a href="#"> 
+                  <span>Make a Bday Wish
+                  <!-- verify the syntax of this link display/path -->
+                  <%#= link_to "Make Bday Wish", wishes_path, action: "create" %>
+                  </span></a>
+                </li>
+                <li class= "divider"></li>
+                <li>
+                  <%= link_to "Sign out", signout_path, id: "sign_out" %>
+                </li>
+              </ul>
+            <% else %>
+              <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+            <% end %>
+          </section>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <%= yield %>
