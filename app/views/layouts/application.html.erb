@@ -1,69 +1,19 @@
 <!DOCTYPE html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en">
   <head>
-  	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<!-- Uncomment to make IE8 render like IE7 -->
-  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-  	<!-- Set the viewport width to device width for mobile -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  	<title><%= content_for?(:title) ? yield(:title) : "Boovius" %></title>
-    <link href='http://fonts.googleapis.com/css?family=Vast+Shadow' rel='stylesheet' type='text/css'>
-
-  	<%= stylesheet_link_tag    "application" %>
-  	<%= javascript_include_tag "vendor/custom.modernizr" %>
-    <%= javascript_include_tag "/js/vendor/jquery.js" %>
-    <%= javascript_include_tag "/js/foundation.min.js" %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
-    
   </head>
 
   <body>
-    <header id = "banner">
-      <div class="contain-to-grid sticky">
-        <nav class = "top-bar">
-          <div id="user-widget">
-            <ul class "title-area">
-              <% if current_friend %>
-              <li class = "name">
-                <span>Welcome <strong><%= current_friend.name %></strong>!</span>
-              </li>
-            </ul>
-            <section class ="top-bar-section">
-              <ul class= "left">
-                <li class= "divider"></li>
-                <li class= "active"><a href="#"> 
-                  <span>Make a Bday Wish
-                  <!-- verify the syntax of this link display/path -->
-                  <%= link_to "Make Bday Wish", :controller => "wishes", :action => "new" %>
-                  </span></a>
-                </li>
-                <li class= "divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, id: "sign_out" %>
-                </li>
-              </ul>
-              <% else %>
-              <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-              <% end %>
-            </section>
-          </div>
-        </nav>
-      </div>
-    </header>
 
     <%= yield %>
-
-    
     <%= javascript_include_tag "application" %>
-    <footer>
-      <p>Team Koala Production</p>
-    </footer>
   </body>
 </html>
