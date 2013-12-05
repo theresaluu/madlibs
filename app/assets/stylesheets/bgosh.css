@@ -14,7 +14,7 @@
 
 header#banner {
   width: 100%; 
-  background: url(madlibsbanner.png) 0% 0 no-repeat fixed; 
+  background: url(madlibsbanner.png) 100% 0 no-repeat fixed; 
 }
 
 header#banner nav ul{
