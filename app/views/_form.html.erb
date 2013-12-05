@@ -1,8 +1,17 @@
 <div id="wish-form">
   <% if current_friend %>
-    <%= current_friend.name %>
-    <%#= link_to "Sign out", signout_path, id: "sign_out" %>
+  <%= form_for @wish do |wish| %>
+  	<p> <%= wish.text_field :nickname %>, you are an older, wiser <%= wish.text_field :noun %>. </p>
+  	<p> This past year, my favorite memory of you was <%= wish.text_field :favmem %>.  I totally thought <%= wish.text_field :thought %>. </p>
+
+  	<p> For the first year of your 30s, I wish you <%= wish.text_field :first %>, <%= wish.text_field :second %>, and <%= wish.text_field :third %>, but not <%= wish.text_field :omen %>. </p>
+
+  	<p> Luckily, now that you're an old guy, you don't have to worry about <%= wish.text_field :adj %> <%= wish.text_field :plnoun %> anymore.</p>
+
+  	<p> <%= wish.text_field :salutation %> </p>
+    <p><%= current_friend.name %>, your <%= wish.text_field :relation %></p>
+    <p> PS. <%= wish.text_field :ps %></p>
   <% else %>
-    <%#= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+  	<p> Wishes can only be made by those who sign in </p>
   <% end %>
 </div>
