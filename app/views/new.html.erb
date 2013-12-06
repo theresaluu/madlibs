@@ -12,6 +12,7 @@
     <p><%= current_friend.name %>, your <%= wish.text_field :relation %></p>
     <p> PS. <%= wish.text_field :ps %></p>
     <p><%= wish.submit %></p>
+    <% end %>
   <% else %>
   	<p> Wishes can only be made by those who sign in </p>
   <% end %>
