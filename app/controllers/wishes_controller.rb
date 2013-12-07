@@ -1,14 +1,13 @@
 class WishesController < ApplicationController
-	def index
-		@wishes = Wish.all
-	end
 
 	def new
 		@wish = Wish.new
+		@wishes = Wish.all
 		if current_friend
 			@user_type = "current_friend"
 		else
 			@user_type = "non_friend"
+		end
 	end
 
 	def create
