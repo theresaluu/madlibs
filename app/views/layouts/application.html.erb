@@ -6,7 +6,7 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
@@ -38,7 +38,7 @@
 
     <%= yield %>
     <%= javascript_include_tag "application" %>
-     <script src="js/foundation/foundation.js"></script>
-     <script src="js/foundation/foundation.topbar.js"></script>
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.topbar.js"></script>
   </body>
 </html>
