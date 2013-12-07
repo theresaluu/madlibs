@@ -1,5 +1,4 @@
 <div id="wish-form">
-  <% if current_friend %>
   <%= form_for @wish, url: {action: "new"} do |wish| %>
   	<p> <%= wish.text_field :nickname %>, you are an older, wiser <%= wish.text_field :noun %>. </p>
   	<p> This past year, my favorite memory of you was <%= wish.text_field :favmem %>.  I totally thought <%= wish.text_field :thought %>. </p>
@@ -12,8 +11,5 @@
     <p><%= current_friend.name %>, your <%= wish.text_field :relation %></p>
     <p> PS. <%= wish.text_field :ps %></p>
     <p><%= wish.submit %></p>
-    <% end %>
-  <% else %>
-  	<p> Wishes can only be made by those who sign in </p>
   <% end %>
 </div>

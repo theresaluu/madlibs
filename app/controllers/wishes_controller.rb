@@ -5,6 +5,10 @@ class WishesController < ApplicationController
 
 	def new
 		@wish = Wish.new
+		if current_friend
+			@user_type = "current_friend"
+		else
+			@user_type = "non_friend"
 	end
 
 	def create
