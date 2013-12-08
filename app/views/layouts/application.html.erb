@@ -12,28 +12,47 @@
   </head>
 
   <body>
+  <!--top nav bar -->
     <div class="contain-to-grid fixed" id="user-widget">
-      <header id="banner"></header>
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
+          <% if current_friend%>
           <li class="name">
-            <% if current_friend%>
-              <h1>Welcome <strong><%= current_friend.name %></strong>!</h1>
+            <h1>Welcome <strong><%= current_friend.name %></strong>!</h1>
           </li>
         </ul>
-            <%= link_to "Sign out", signout_path, id: "sign_out" %>
-            <% else %>
-              <section class="top-bar-section">
-                <ul class="left">
-                  <li> <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %> </li>
-                </ul>
-            <% end %>
-                <ul class="right">
-                  <li class="active"><%= link_to "Make a Wish", :controller => "wishes", :action => "new", :id => @wish %> </li>
-                </ul>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="active"><%= link_to "Make a Wish", "/friends/:friend_id/wishes/new" %> </li>
+            <li class="divider"></li>
+            <li> <%= link_to "Sign out", signout_path, id: "sign_out" %> </li>
+          </ul>
+        </section>
+          <% else %>
+        <section class="top-bar-section">
+          <ul class="left">
+            <li> <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %> </li>
+          </ul>
+        <% end %>
         </section>
       </nav>
     </div>
+  <!--end nav bar -->
+
+  <!--banner-->
+  <section id="banner">
+    <div class="row">
+      <div class="large-12 columns">
+        <%= image_tag "madlibsbanner.png"%>
+        <div>
+          <h3>World's Greatest Surprise Birthday Card Using World's Greatest Word Game</h3>
+          <div> (Happy Birthday, Josh) </div>
+        </div>
+      </div>
+    </div>
+ 
+  <!-- end banner -->
+  </section>
 
 
     <%= yield %>

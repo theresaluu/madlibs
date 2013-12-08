@@ -12,15 +12,11 @@
 	font-family: 'Vast Shadow', cursive;
 }
 
-header#banner {
+#banner {
   width: 100%; 
-  background: url(madlibsbanner.png) 100% 0 no-repeat fixed; 
-}
-
-header#banner nav ul{
-  list-style: none; 
-  margin: 0;
-  padding: 0;
+/*  background: url(madlibsbanner.png) 100% 0 no-repeat fixed; */
+  display:block;
+  text-align:center;
 }
 
 #page_header nav ul li {
