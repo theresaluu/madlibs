@@ -43,11 +43,22 @@
   width: 100%; 
 }
 
-/*.blank{
+.blank{
   border-width: 1px;
   border-bottom-style: double;
-  border-color: black;
-}*/
+  border-color: grey;
+  color:grey;
+}
+
+.paragraph{
+  margin-bottom: 2%;
+}
+
+#preview{
+  padding-top: 40px;
+  margin-left: 7%;
+
+}
 
 #wish {
 	background: url(lounge.jpg) 100% 0 no-repeat; 
@@ -59,6 +70,19 @@
   position: relative; 
   -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
   box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+#wish-form{
+  margin-left: 8%;
+  
+  border-style: solid;
+  border-color: grey;
+  padding-top: 5%;
+  padding-left: 7%;
+}
+.wish-heading{
+  margin-top: 10%;
+  text-align:center;
 }
 
 #wish article {
