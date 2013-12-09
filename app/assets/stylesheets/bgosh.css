@@ -43,6 +43,12 @@
   width: 100%; 
 }
 
+/*.blank{
+  border-width: 1px;
+  border-bottom-style: double;
+  border-color: black;
+}*/
+
 #wish {
 	background: url(lounge.jpg) 100% 0 no-repeat; 
   min-height: 900px;

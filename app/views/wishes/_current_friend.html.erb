@@ -1,13 +1,50 @@
 <div id="wish-form">
-  <%= form_for @wish, url: {action: "new"} do |wish| %>
-  	<p> <%= wish.text_field :nickname %></p>
-  	<p> This past year, my favorite memory of you was <%= wish.text_field :favmem %>.  I totally thought <%= wish.text_field :thought %>. </p>
-
-  	<p> For the first year of your 30s, I wish you <%= wish.text_field :first %>, <%= wish.text_field :second %>, and <%= wish.text_field :third %>, but not <%= wish.text_field :omen %>. </p>
-
-  	<p> <%= wish.text_field :salutation %> </p>
-    <p><%= current_friend.name %>, your <%= wish.text_field :relationship %></p>
-    <p> PS. <%= wish.text_field :ps %></p>
-    <p><%= wish.submit %></p>
-  <% end %>
+  <div>
+    <span class= "blank">josh's nickname</span>, this past year, my favorite memory of you was <span class= "blank"> favorite memory </span>.  I totally thought, <span class= "blank"> opinion of that memory </span>
+  </div>
+  <form>
+    <div class="row">
+      <%= form_for @wish, url: {action: "new"} do |wish| %>
+      <div class ="row collapse">
+        <p> 
+          <span class="small-10 large-2 columns blank">
+            <%= wish.text_field :nickname, :placeholder => "josh's nickname" %>
+          </span> 
+          <span class="small-10 large-4 columns blank"> 
+            <%= wish.text_field :favmem, :placeholder => "favorite memory" %>
+          </span> 
+          <span class="small-10 large-4 columns blank"> 
+            <%= wish.text_field :thought, :placeholder => "opinion of that memory" %>
+          </span> 
+          <span class="small-10 large-4 columns blank">
+            <%= wish.text_field :first, :placeholder => "first wish" %>
+          </span> 
+          <span class="small-10 large-4 columns blank"> 
+            <%= wish.text_field :second, :placeholder => "second wish" %>
+          </span> and 
+          <span class="small-10 large-4 columns blank"> 
+            <%= wish.text_field :third, :placeholder => "third wish"%>
+          </span>
+          <span class="small-10 large-4 columns blank">
+            <%= wish.text_field :omen, :placeholder => "something you don't wish for him" %>
+          </span>
+          <span class="small-10 large-3 columns blank">
+            <%= wish.text_field :salutation, :placeholder => "your version of 'peace-out'" %>,
+          </span> 
+          <span class="small-10 large-3 columns blank">
+            <%= current_friend.name %>, your <%= wish.text_field :relationship, :placeholder => "relationship to josh" %>
+          </span>
+          <span class="small-10 columns blank">
+            PS. <%= wish.text_field :ps %>
+          </span>
+          <span class="small-10 columns blank">
+            <%= wish.submit %>
+          </span>
+        </p>
+      <% end %>
+      </div>
+    </div>
+  </form>
+  
+  
 </div>

@@ -1,2 +1,5 @@
 <%= render partial: @user_type %>
-<%= render partial: "index" %>
+
+<% @wishes.each do |wish| %>
+<%= render partial: "index", :collection => @wishes %>
+<% end %>
