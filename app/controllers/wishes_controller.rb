@@ -2,7 +2,6 @@ class WishesController < ApplicationController
 
 	def new
 		@wish = Wish.new
-		@wishes = Wish.all
 		if current_friend
 			@user_type = "current_friend"
 		else
