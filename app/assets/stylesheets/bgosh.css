@@ -1,10 +1,10 @@
-.statement {
+/*.statement {
 	margin-bottom: 1.25em;
 	padding: 1.25em;
 	height: 420px;
-	background-color: url("dollar.png") no-repeat center center;
+	background: url("dollar.png") no-repeat center center;
 	background-size: 100%;
-}
+}*/
 
 .wt_tx{
   background-color: black;
@@ -14,9 +14,32 @@
 
 #banner {
   width: 100%; 
-/*  background: url(madlibsbanner.png) 100% 0 no-repeat fixed; */
   display:block;
   text-align:center;
+}
+
+#formpic1 {
+  background: url("fourthjane.jpg") 100% 0 no-repeat fixed; 
+  background-size: 786px 500px;
+  min-height: 1000px;
+  height: 1000px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative; 
+}
+
+#formpic2 {
+  background: url("dollar.png") 100% 0 no-repeat fixed; 
+  background-size: 400px 650px;
+  min-height: 900px;
+  height: 1000px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative; 
+  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
 }
 
 #page_header nav ul li {
@@ -26,7 +49,7 @@
 }
 
 #home {
-	background: url(radial.jpg) 50% 0 repeat fixed; 
+	background: url(radial.jpg) 50% 0 no-repeat fixed; 
   min-height: 1000px;
   height: 1000px; 
   margin: 0 auto; 
@@ -49,6 +72,16 @@
   border-color: grey;
   color:grey;
 }
+#grad {
+  background: url(grad.jpg) 50% 0 no-repeat fixed; 
+  background-size: 786px 500px;
+  min-height: 1000px;
+  height: 1000px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative; 
+}
 
 .paragraph{
   margin-bottom: 2%;
@@ -61,7 +94,8 @@
 }
 
 #wish {
-	background: url(lounge.jpg) 100% 0 no-repeat; 
+	background: url(newcrew.jpg) 100% 0 no-repeat; 
+  background-size: 786px 500px;
   min-height: 900px;
   height: 1000px; 
   margin: 0 auto; 
@@ -74,7 +108,6 @@
 
 #wish-form{
   margin-left: 8%;
-  
   border-style: solid;
   border-color: grey;
   padding-top: 5%;
