@@ -1,9 +1,24 @@
 <% @wishes.each do |wish| %>
-	<%= wish.nickname %>, this past year, my favorite memory of you was 
-	<%= wish.favmem%>.  I totally thought <%= wish.thought%>.  For the first year of your 30s, I wish you <%= wish.first %>, <%= wish.second %>, and <%= wish.third %>, but not <%= wish.omen %>.
+	<div class="wish_paragraph">
+		<div class="paragraph">
+		<%= wish.nickname %>, 
+	  </div>
+	  <div class= "paragraph">
+	    This past year, my favorite memory of you was <%= wish.favmem%>.  I totally thought <%= wish.thought%>.  
+	  </div>
+	  <div class= "paragraph">
+	    For the first year of your 30s, I wish you <%= wish.first %>, <%= wish.second %>, and <%= wish.third %>, but not <%= wish.omen %>.
+	  </div>
 
-	<%= wish.salutation %>,
-	<%= current_friend.name %>, your <%= wish.relationship %>
+	  <div class= "paragraph">
+	    <%= wish.salutation %>,
+	  </div>
+	  <div class= "paragraph">
+	    <%= wish.friend.name %>, your <%= wish.relationship %>
+	  </div>
 
-	PS. <%= wish.ps %>
+	  <div class= "paragraph">
+	    PS. <%= wish.ps %>
+	  </div>
+	</div>
 <% end %>

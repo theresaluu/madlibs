@@ -3,29 +3,7 @@
   </article>
 </section>
 <section id= "wishing">
-	<% @wishes.each do |wish| %>
-  <div class= "paragraph">
-    <%= wish.nickname %>, 
-  </div>
-  <div class= "paragraph">
-    This past year, my favorite memory of you was <%= wish.favmem%>.  I totally thought <%= wish.thought%>.  
-  </div>
-  <div class= "paragraph">
-    For the first year of your 30s, I wish you <%= wish.first %>, <%= wish.second %>, and <%= wish.third %>, but not <%= wish.omen %>.
-  </div>
-
-  <div class= "paragraph">
-    <%= wish.salutation %>,
-  </div>
-  <div class= "paragraph">
-    <%= wish.wisher %>, your <%= wish.relationship %>
-  </div>
-
-  <div class= "paragraph">
-    PS. <%= wish.ps %>
-  </div>
-<% end %>
-	
+  <%= render partial: 'wishes' %>
 </section>
 
 <section id = "wish" data-type="background" data-speed="10"></section>
