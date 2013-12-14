@@ -1,0 +1,19 @@
+<div class = "row">
+  <div class = "small-10 large-8" id = "preview">
+    <div class = "paragraph">
+      <span class="blank"><%= @wish.nickname %></span>,
+    </div> 
+    <div class = "paragraph">
+      This past year, my favorite memory of you was 
+      <span class= "blank"> <%= @wish.favmem %> </span>.  I totally thought, <br> 
+      "<span class= "blank"> <%= @wish.thought %> </span>"
+    </div>
+    <div class = "paragraph">
+      For the first year of your 30s, I wish you <span class= "blank"> <%= @wish.first %> </span>, <span class= "blank"> <%= @wish.second %> </span>, and <span class= "blank"> <%= @wish.third %> </span>, but not <span class= "blank"> <%= @wish.omen %> </span>.
+    </div>
+    <div class = "paragraph"> <span class= "blank"> <%= @wish.salutation %> </span>, </div>
+    <div class = "paragraph"> <%= @wish.wisher %>,  your <span class = "blank"> <%= @wish.relationship %> </span> </div>
+    <div class = "paragraph"> PS. <span class = "blank"> <%= @wish.ps %> <span></div>
+    </div>
+  </div>
+</div>

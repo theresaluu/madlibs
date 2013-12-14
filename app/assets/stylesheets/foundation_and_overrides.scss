@@ -22,9 +22,9 @@
 // $rem-base: 16px;
 
 // We use this to control whether or not CSS classes come through in the gem files.
-// $include-html-classes: true;
+$include-html-classes: true;
 // $include-print-styles: true;
-// $include-html-global-classes: $include-html-classes;
+$include-html-global-classes: $include-html-classes;
 
 // Grid
 
@@ -924,11 +924,11 @@
 // TOP BAR
 //
 
-// $include-html-top-bar-classes: $include-html-classes;
+$include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: black;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
 // $topbar-height: 45px;

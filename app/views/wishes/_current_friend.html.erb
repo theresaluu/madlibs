@@ -16,7 +16,7 @@
       For the first year of your 30s, I wish you <span class= "blank"> (first wish) </span>, <span class= "blank"> (second wish) </span>, and <span class= "blank"> (third wish) </span>, but not <span class= "blank"> (something you didn't wish for the bday boy) </span>.
     </div>
     <div class = "paragraph"> <span class= "blank"> (personal saluatation) </span>, </div>
-    <div class = "paragraph"> <%= current_friend.name %>,  your <span class = "blank"> (relationship to josh) </span> </div>
+    <div class = "paragraph"> (your nickname),  your <span class = "blank"> (relationship to josh) </span> </div>
     <div class = "paragraph"> PS. <span class = "blank"> (personal message) <span></div>
     </div>
   </div>
@@ -56,6 +56,15 @@
           <span class="small-10 large-3 columns">
             <%= wish.text_field :salutation, :placeholder => "ur version 'peace-out'" %>
           </span> 
+
+          <span class="small-10 large-3 columns">
+            <%= wish.text_field :wisher, :placeholder => "your (nick)name" %>
+          </span> 
+
+          <span class="small-10 large-3 columns">
+            <%= wish.text_field :relationship, :placeholder => "your relationship to Josh" %>
+          </span> 
+
           <span class="small-10 columns">
             <%= wish.text_field :ps, :placeholder => "personal message" %>
           </span>

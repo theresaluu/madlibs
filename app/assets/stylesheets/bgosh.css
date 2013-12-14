@@ -134,6 +134,10 @@
 }
 }
 
+#wishing{
+  display: block;
+}
+
 .xword {
   color: coral;
 }

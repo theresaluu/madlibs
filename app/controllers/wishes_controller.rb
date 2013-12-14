@@ -9,14 +9,17 @@ class WishesController < ApplicationController
 		end
 	end
 
+	def show
+		@wish = @friend.wishes.find(params[:id])
+	end
+
 	def create
-		wish = wish_list.wishes.create!(safe_params)
-		render json: wish, status: 201
+		wish = @friend.wishes.create!(safe_params)
+		redirect_to @friend.wish
 	end
 
 	def update
 		wish.update_attributes(safe_params)
-		render nothing: true, status: 204
 	end
 
 	private
