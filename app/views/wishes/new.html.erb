@@ -1,1 +1,35 @@
-<%= render partial: @user_type %>
+<section id="formpic1"></section>
+
+<div class = "row">
+  <div class = "small-10 large-8" id = "preview">
+    <div class="wish-heading"><h3> Wish Preview </h3></div>
+    <div class = "paragraph">
+      <span class="blank">(Josh's nickname)</span>,
+    </div> 
+    <div class = "paragraph">
+      This past year, my favorite memory of you was 
+      <span class= "blank"> (favorite memory) </span>.  I totally thought, <br> 
+      "<span class= "blank"> (opinion of that memory) </span>"
+    </div>
+    <div class = "paragraph">
+      For the first year of your 30s, I wish you <span class= "blank"> (first wish) </span>, <span class= "blank"> (second wish) </span>, and <span class= "blank"> (third wish) </span>, but not <span class= "blank"> (something you didn't wish for the bday boy) </span>.
+    </div>
+    <div class = "paragraph"> <span class= "blank"> (personal saluatation) </span>, </div>
+    <div class = "paragraph"> (your nickname),  your <span class = "blank"> (relationship to josh) </span> </div>
+    <div class = "paragraph"> PS. <span class = "blank"> (personal message) <span></div>
+    </div>
+  </div>
+</div>
+
+<section id="formpic2"></section>
+<div class = "row">
+  <form>
+    <div class="wish-heading"><h3>Fill-in-the-Wish Form</h3></div>
+    <div class = "small-10 large-8" id="wish-form">
+      <%= form_for @wish, url: {action: "create"} do |wish| %>
+		    <%= render partial: @user_type, :locals => {:wish => wish}  %>
+		  <% end %>
+    </div>
+  </form>
+</dov>
+  

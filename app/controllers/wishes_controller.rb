@@ -2,11 +2,7 @@ class WishesController < ApplicationController
 
 	def new
 		@wish = Wish.new
-		if current_friend
-			@user_type = "current_friend"
-		else
-			@user_type = "non_friend"
-		end
+		@user_type = "current_friend"
 	end
 
 	def show
@@ -14,8 +10,13 @@ class WishesController < ApplicationController
 	end
 
 	def create
-		wish = @friend.wishes.create!(safe_params)
-		redirect_to @friend.wish
+		@wish = @friend.wishes.new(safe_params)
+
+		if @wish.save
+			redirect_to @friend.wish
+		else
+			redirect_to "new"
+		end
 	end
 
 	def update
