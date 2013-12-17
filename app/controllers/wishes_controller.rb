@@ -11,7 +11,7 @@ class WishesController < ApplicationController
 	end
 
 	def create
-		@wish = @friend.wishes.new(safe_params)
+		@wish = @friend.wish.new(safe_params)
 
 		if @wish.save
 			redirect_to @friend.wish
@@ -26,7 +26,7 @@ class WishesController < ApplicationController
 
 	private
 	def safe_params
-		params.require(:wish).permit(:nickname, :noun, :favmemory, :thought, :first, :second, :third, 
-			:omen, :plnoun, :salutation, :relation, :ps)
+		params.require(:wish).permit(:nickname, :favmemory, :thought, :first, :second, :third, 
+			:omen, :salutation, :wisher, :relation, :ps, :friend_id)
 	end
 end
