@@ -1,8 +1,9 @@
 class WishesController < ApplicationController
 
 	def new
-		@wish = Wish.new
 		@user_type = "current_friend"
+		@wish = Wish.new(@current_friend)
+		
 	end
 
 	def show
