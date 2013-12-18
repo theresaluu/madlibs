@@ -23,13 +23,11 @@
 
 <section id="formpic2"></section>
 <div class = "row">
-  <form>
-    <div class="wish-heading"><h3>Fill-in-the-Wish Form</h3></div>
-    <div class = "small-10 large-8" id="wish-form">
-      <%= form_for @wish, url: {action: "create"} do |wish| %>
-		    <%= render partial: @user_type, :locals => {:wish => wish}  %>
-		  <% end %>
-    </div>
-  </form>
-</dov>
+  <div class="wish-heading"><h3>Fill-in-the-Wish Form</h3></div>
+  <div class = "small-10 large-8" id="wish-form">
+    <%= form_for [current_friend, @wish] do |wish| %>
+	    <%= render partial: @user_type, :locals => {:wish => wish}  %>
+	  <% end %>
+  </div>
+</div>
   
