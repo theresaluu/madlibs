@@ -21,7 +21,7 @@
 #formpic1 {
   background: url("fourthjane.jpg") 100% 0 no-repeat fixed; 
   background-color: black;
-  background-size: 786px 500px;
+  background-size: 864px 539px;
   min-height: 1000px;
   height: 1000px; 
   margin: 0 auto; 
@@ -31,9 +31,9 @@
 }
 
 #formpic2 {
-  background: url("dollar.png") 100% 0 no-repeat fixed; 
+  background: url("together.png") 100% 0 no-repeat fixed; 
   background-color: black;
-  background-size: 400px 650px;
+  background-size: 900px 500px;
   min-height: 900px;
   height: 1000px; 
   margin: 0 auto; 
@@ -54,11 +54,13 @@
 	background: url(radial.jpg) 50% 0 no-repeat fixed;
   background-color: black; 
   min-height: 1000px;
+  min-height: 1000px;
   height: 1000px; 
   margin: 0 auto; 
   width: 100%; 
   max-width: 1920px; 
   position: relative; 
+
 }
 
 #home article { 
@@ -69,16 +71,29 @@
   width: 100%; 
 }
 
-.blank{
-  border-width: 1px;
-  border-bottom-style: double;
-  border-color: grey;
-  color:grey;
+#instructions {
+  margin-top: 7%;
+  margin-left: 7%;
+  background-color: lightsteelblue;
+  padding: 5%;
+  border-style: double;
+  border-color: lightcyan;
 }
+
+#instr-prev{
+  background-color: black;
+}
+
+.blank{
+  border-width: 3px;
+  border-bottom-style: double;
+  border-color: rgb(60, 60, 131);
+}
+
 #grad {
   background: url(grad.jpg) 50% 0 no-repeat fixed; 
   background-color: black;
-  background-size: 786px 500px;
+  background-size: 786px 400px;
   min-height: 1000px;
   height: 1000px; 
   margin: 0 auto; 
@@ -91,14 +106,44 @@
   margin-bottom: 2%;
 }
 
-.wish_paragraph{
-  margin: 1%;
+.song {
+  color: blue;
+}
+
+.wish_paragraph:nth-child(even){
+  padding: 5%;
+  border-style: double;
+  border-color: rgb(88, 164, 194);
+  background: white;
+}
+
+.wish_paragraph:nth-child(odd){
+  padding: 5%;
+  border-style: double;
+  border-color: lightcyan;
+  background: lightsteelblue;
+}
+
+#last{
+  background: url(run.jpg) 50% 0 no-repeat fixed;
+  background-color: black;
+  background-size: 500px 786px;
+  min-height: 1000px;
+  height: 1000px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative; 
 }
 
 #preview{
-  padding-top: 40px;
+  margin-top: 7%;
   margin-left: 7%;
   margin-bottom: 7%;
+  padding: 5%;
+  border-style: double;
+  border-color: rgb(88, 164, 194);
+  background: white;
 }
 
 #wish {
@@ -122,9 +167,11 @@
   padding-top: 5%;
   padding-left: 7%;
   margin-bottom: 8%;
+  margin-top: 8%;
 }
+
 .wish-heading{
-  margin-top: 10%;
+  margin-top: -5%;
   text-align:center;
 }
 
@@ -140,6 +187,7 @@
 
 #wishing{
   display: block;
+  background-color: slategrey;
 }
 
 .xword {
