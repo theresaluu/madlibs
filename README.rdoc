@@ -1,28 +1,32 @@
-== README
+== MadLibs Bday App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Why:
+Created an app to be working on a project alongside my students so I could make and break code, and also, have a point of reference when helping them debug.
 
-Things you may want to cover:
+Goodies in this app/about this app:
 
-* Ruby version
+* OmniAuth/FB login
 
-* System dependencies
+* Parallax scrolling
 
-* Configuration
+* PG db
 
-* Database creation
+* Heroku Deployment
 
-* Database initialization
+* Pivotal Tracker: https://www.pivotaltracker.com/s/projects/966920
 
-* How to run the test suite
+* CR of the CRUD
 
-* Services (job queues, cache servers, search engines, etc.)
+Shout outs to the following developer homies for their help/contribution: 
+@ekubokirs 
+@jennifermarie
+@danieljacobarcher
+@tehpeh
+@machikoyasuda
 
-* Deployment instructions
 
-* ...
+Blog of Lessons Learned : (coming soon)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Made in Santa Monica by Theresa Luu 
+Rubynista
